@@ -7,6 +7,9 @@ file.close()
 pprint(file_content)
 
 
+# name = 'example.txt'
+# file = open(name, 'r')
+# pprint(file.read())
 
 
 
