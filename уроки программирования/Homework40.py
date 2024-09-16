@@ -37,16 +37,6 @@ class Cafe:
 
     def discuss_guests(self):
         while self.queue.empty() or any([table.guest for table in self.tables]):
-        # while True:
-        #     if self.queue.empty():
-        #         break
-        #
-        #     for table in self.tables:
-        #         if table.guest:
-        #             break
-        #     else:
-        #         break
-
             for table in self.tables:
                 if table.guest and not table.guest.is_alive():
                     print(f"{table.guest.name} покушал(-а) и ушёл(ушла)" )
@@ -75,21 +65,3 @@ cafe = Cafe(*tables)
 cafe.guest_arrival(*guests)
 # Обслуживание гостей
 cafe.discuss_guests()
-
-
-
-# def discuss_guests(self):
-#     tables = [Table(number) for number in range(1, 6)]
-#     # Имена гостей
-#     guests_names = [
-#         'Maria', 'Oleg', 'Vakhtang', 'Sergey', 'Darya', 'Arman',
-#         'Vitoria', 'Nikita', 'Galina', 'Pavel', 'Ilya', 'Alexandra'
-#     ]
-# # Создание гостей
-#     guests = [Guest(name) for name in guests_names]
-#     # Заполнение кафе столами
-#     cafe = Cafe(*tables)
-#     # Приём гостей
-#     cafe.guest_arrival(*guests)
-#     # Обслуживание гостей
-#     cafe.discuss_guests()
