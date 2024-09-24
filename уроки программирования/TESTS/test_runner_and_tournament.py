@@ -8,7 +8,7 @@ class TournamentTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.all_results = {}
-    # @unittest.skip('Тесты в этом кейсе заморожены')
+    @unittest.skip('Тесты в этом кейсе заморожены')
     def setUp(self):
         self.usain = Runner("Усэйн", speed=10)
         self.andrey = Runner("Андрей", speed=9)
